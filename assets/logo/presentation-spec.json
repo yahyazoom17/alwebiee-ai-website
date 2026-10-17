@@ -1,0 +1,46 @@
+{
+  "brand": "Alwebiee",
+  "tagline": "AI content platform",
+  "deck_title": "the woven frame",
+  "brief": "An AI startup. The mark has to feel precise and intelligent, calm and trustworthy, and human and approachable — and it has to survive as a 16 px favicon and a circular social avatar.",
+  "adjectives": ["precise", "intelligent", "calm", "trustworthy", "approachable"],
+  "criteria": "Success: reads as intelligent and human at once — not cold, and not one of the category clichés (robot heads, brain circuits, glowing nodes); stays legible at 16 px; works in one colour; crop-safe as a circular avatar.",
+  "industry": "software",
+  "mockups": ["readme", "app-icon", "website", "terminal", "sticker", "social"],
+  "nav": ["Product", "Docs", "Pricing"],
+  "brand_color": "#0F7A4F",
+  "tile_color": "#0F7A4F",
+  "greyscale": false,
+  "final": true,
+  "round": 3,
+  "designer": "Alwebiee",
+  "recommendation": "The Woven Frame — one continuous thread that weaves a frame around an 'A'. Green distinguishes an AI brand in a sea of blue, the thread supplies the human warmth, and the mark still reads as a monogram at 16 px.",
+  "next_steps": [
+    "Wordmark typeface: Plus Jakarta Sans SemiBold (SIL OFL), outlined to paths — swap it any time with tools/rebuild_brand.py.",
+    "Proof the green: match Pantone 341 C on a physical chip and approve a CMYK build on the real stock.",
+    "Install the web-icon set (variants/) into the site, app and social profiles.",
+    "Run a trademark search on the name and the mark before launch.",
+    "_Placeholder: the tagline above is a stand-in — supply the real one."
+  ],
+  "concepts": [
+    {
+      "name": "The Woven Frame",
+      "symbol": "master-a.svg",
+      "lockup": "lockup-a-master.svg",
+      "stacked": "stacked-a.svg",
+      "avatar": "icon-a-green.svg",
+      "symbol_on_tile": "icon-a-green.svg",
+      "stacked_on_tile": "stacked-a-green.svg",
+      "lockup_on_tile": "lockup-a-green.svg",
+      "symbol_on_dark": "variants/alwebiee-white.svg",
+      "lockup_on_dark": "variants/alwebiee-horizontal-white.svg",
+      "idea": "A single unbroken thread weaves a frame around an 'A' — so one shape carries both the monogram and the human hand, and 'intelligence' and 'approachable' share the same line.",
+      "rationale": [
+        "The negative-space 'A' appears only after a second look — the mark rewards attention.",
+        "One continuous line: no closed shapes, so it survives at 16 px and in one colour.",
+        "Green instead of the category's blue — distinct, and it reads calm rather than loud.",
+        "Everything is on a 16-unit grid with one corner radius, so it scales cleanly."
+      ]
+    }
+  ]
+}

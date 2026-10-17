@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="t">
+  <title id="t">Alwebiee — The Settled Ripple</title>
+  <!-- Centre disc r 27 + one ring r 88 (stroke 26), split by two aligned
+       36-unit gaps on the vertical axis. Butterfly + 180° symmetric. -->
+  <g fill="none" stroke="#111" stroke-width="26" stroke-linecap="butt">
+    <path d="M 145.85 41.83 A 88 88 0 0 1 145.85 214.17"/>
+    <path d="M 110.15 214.17 A 88 88 0 0 1 110.15 41.83"/>
+  </g>
+  <circle cx="128" cy="128" r="27" fill="#111"/>
+</svg>

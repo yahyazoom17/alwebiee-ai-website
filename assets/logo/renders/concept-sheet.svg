@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="984" viewBox="0 0 1600 984"><defs><filter id="grey"><feColorMatrix type="saturate" values="0"/></filter></defs><rect width="1600" height="984" fill="#f7f7f4"/><text x="60" y="78" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="40" font-weight="700" fill="#161616">Alwebiee — logo directions</text><text x="60" y="116" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" fill="#6b6b6b">abstract symbol · greyscale first · shown at full size, 64, 32 and 16 px</text><rect x="60" y="150" width="474.667" height="774" rx="18" fill="#fff" stroke="#e4e4e0" stroke-width="1"/><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t" viewBox="0 0 256 256" x="90" y="190" width="414.667" height="300" preserveAspectRatio="xMidYMid meet">
+  <title id="c0-t">Alwebiee — The Woven Frame</title>
+  <!-- One rounded-square frame, drawn as two threads. Thread H (top+right) lies
+       OVER thread V (bottom+left) at the top-left corner, and V lies over H at
+       the bottom-right (automatic under a 180° rotation). The under-thread is
+       cut with a 5-unit seam either side of the over-thread; both thread ends
+       overshoot the join by 31 units. Butt caps keep the weave crisp. -->
+  <g fill="none" stroke="#111" stroke-width="28" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M 35 80 H 142 A 34 34 0 0 1 176 114 V 157"/>
+    <path d="M 176 195 V 221"/>
+    <path d="M 221 176 H 114 A 34 34 0 0 1 80 142 V 99"/>
+    <path d="M 80 61 V 35"/>
+  </g>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="lt" viewBox="0 0 808 256" x="90" y="514" width="414.667" height="120" preserveAspectRatio="xMidYMid meet">
+  <title id="l0-lt">Alwebiee — lockup (wordmark font is a PLACEHOLDER)</title>
+  <!-- Symbol ink scaled to 176 units tall, centred in a 200-unit slot.
+       The wordmark is <text> in "URW Gothic" — a stand-in, not the final typeface. -->
+  <g transform="translate(-21.12,6.88) scale(0.9462)">
+
+  <title id="l0-t">Alwebiee — The Woven Frame</title>
+  <!-- One rounded-square frame, drawn as two threads. Thread H (top+right) lies
+       OVER thread V (bottom+left) at the top-left corner, and V lies over H at
+       the bottom-right (automatic under a 180° rotation). The under-thread is
+       cut with a 5-unit seam either side of the over-thread; both thread ends
+       overshoot the join by 31 units. Butt caps keep the weave crisp. -->
+  <g fill="none" stroke="#111" stroke-width="28" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M 35 80 H 142 A 34 34 0 0 1 176 114 V 157"/>
+    <path d="M 176 195 V 221"/>
+    <path d="M 221 176 H 114 A 34 34 0 0 1 80 142 V 99"/>
+    <path d="M 80 61 V 35"/>
+  </g>
+  </g>
+  <text x="230" y="172.4" font-family="URW Gothic" font-size="120"
+        font-weight="600" fill="#111" letter-spacing="-2">Alwebiee</text>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t" viewBox="0 0 256 256" x="90" y="660" width="64" height="64" preserveAspectRatio="xMidYMid meet">
+  <title id="s064-t">Alwebiee — The Woven Frame</title>
+  <!-- One rounded-square frame, drawn as two threads. Thread H (top+right) lies
+       OVER thread V (bottom+left) at the top-left corner, and V lies over H at
+       the bottom-right (automatic under a 180° rotation). The under-thread is
+       cut with a 5-unit seam either side of the over-thread; both thread ends
+       overshoot the join by 31 units. Butt caps keep the weave crisp. -->
+  <g fill="none" stroke="#111" stroke-width="28" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M 35 80 H 142 A 34 34 0 0 1 176 114 V 157"/>
+    <path d="M 176 195 V 221"/>
+    <path d="M 221 176 H 114 A 34 34 0 0 1 80 142 V 99"/>
+    <path d="M 80 61 V 35"/>
+  </g>
+</svg>
+</g><text x="122" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">64px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t" viewBox="0 0 256 256" x="180" y="692" width="32" height="32" preserveAspectRatio="xMidYMid meet">
+  <title id="s032-t">Alwebiee — The Woven Frame</title>
+  <!-- One rounded-square frame, drawn as two threads. Thread H (top+right) lies
+       OVER thread V (bottom+left) at the top-left corner, and V lies over H at
+       the bottom-right (automatic under a 180° rotation). The under-thread is
+       cut with a 5-unit seam either side of the over-thread; both thread ends
+       overshoot the join by 31 units. Butt caps keep the weave crisp. -->
+  <g fill="none" stroke="#111" stroke-width="28" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M 35 80 H 142 A 34 34 0 0 1 176 114 V 157"/>
+    <path d="M 176 195 V 221"/>
+    <path d="M 221 176 H 114 A 34 34 0 0 1 80 142 V 99"/>
+    <path d="M 80 61 V 35"/>
+  </g>
+</svg>
+</g><text x="196" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">32px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t" viewBox="0 0 256 256" x="238" y="708" width="16" height="16" preserveAspectRatio="xMidYMid meet">
+  <title id="s016-t">Alwebiee — The Woven Frame</title>
+  <!-- One rounded-square frame, drawn as two threads. Thread H (top+right) lies
+       OVER thread V (bottom+left) at the top-left corner, and V lies over H at
+       the bottom-right (automatic under a 180° rotation). The under-thread is
+       cut with a 5-unit seam either side of the over-thread; both thread ends
+       overshoot the join by 31 units. Butt caps keep the weave crisp. -->
+  <g fill="none" stroke="#111" stroke-width="28" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M 35 80 H 142 A 34 34 0 0 1 176 114 V 157"/>
+    <path d="M 176 195 V 221"/>
+    <path d="M 221 176 H 114 A 34 34 0 0 1 80 142 V 99"/>
+    <path d="M 80 61 V 35"/>
+  </g>
+</svg>
+</g><text x="246" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">16px</text><text x="90.0" y="780" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#161616">A · The Woven Frame</text><text x="90.0" y="814" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">One frame, two threads: they cross and tuck</text><text x="90.0" y="840" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">at opposite corners — structure that holds</text><text x="90.0" y="866" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">together.</text><rect x="562.667" y="150" width="474.667" height="774" rx="18" fill="#fff" stroke="#161616" stroke-width="2"/><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t" viewBox="0 0 256 256" x="592.667" y="190" width="414.667" height="300" preserveAspectRatio="xMidYMid meet">
+  <title id="c1-t">Alwebiee — The Lens Tile</title>
+  <!-- Solid squircle 34..222 (r 63) with one lens-shaped window knocked out
+       (two r-65 arcs, 80 wide x 120 tall). evenodd cuts the window. -->
+  <path fill="#111" fill-rule="evenodd" d="M 97 34 H 159 A 63 63 0 0 1 222 97 V 159 A 63 63 0 0 1 159 222 H 97 A 63 63 0 0 1 34 159 V 97 A 63 63 0 0 1 97 34 Z M 128 68 A 65 65 0 0 1 128 188 A 65 65 0 0 1 128 68 Z"/>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="lt" viewBox="0 0 808 256" x="592.667" y="514" width="414.667" height="120" preserveAspectRatio="xMidYMid meet">
+  <title id="l1-lt">Alwebiee — lockup (wordmark font is a PLACEHOLDER)</title>
+  <!-- Symbol ink scaled to 176 units tall, centred in a 200-unit slot.
+       The wordmark is <text> in "URW Gothic" — a stand-in, not the final typeface. -->
+  <g transform="translate(-19.83,8.17) scale(0.9362)">
+
+  <title id="l1-t">Alwebiee — The Lens Tile</title>
+  <!-- Solid squircle 34..222 (r 63) with one lens-shaped window knocked out
+       (two r-65 arcs, 80 wide x 120 tall). evenodd cuts the window. -->
+  <path fill="#111" fill-rule="evenodd" d="M 97 34 H 159 A 63 63 0 0 1 222 97 V 159 A 63 63 0 0 1 159 222 H 97 A 63 63 0 0 1 34 159 V 97 A 63 63 0 0 1 97 34 Z M 128 68 A 65 65 0 0 1 128 188 A 65 65 0 0 1 128 68 Z"/>
+  </g>
+  <text x="230" y="172.4" font-family="URW Gothic" font-size="120"
+        font-weight="600" fill="#111" letter-spacing="-2">Alwebiee</text>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t" viewBox="0 0 256 256" x="592.667" y="660" width="64" height="64" preserveAspectRatio="xMidYMid meet">
+  <title id="s164-t">Alwebiee — The Lens Tile</title>
+  <!-- Solid squircle 34..222 (r 63) with one lens-shaped window knocked out
+       (two r-65 arcs, 80 wide x 120 tall). evenodd cuts the window. -->
+  <path fill="#111" fill-rule="evenodd" d="M 97 34 H 159 A 63 63 0 0 1 222 97 V 159 A 63 63 0 0 1 159 222 H 97 A 63 63 0 0 1 34 159 V 97 A 63 63 0 0 1 97 34 Z M 128 68 A 65 65 0 0 1 128 188 A 65 65 0 0 1 128 68 Z"/>
+</svg>
+</g><text x="624.667" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">64px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t" viewBox="0 0 256 256" x="682.667" y="692" width="32" height="32" preserveAspectRatio="xMidYMid meet">
+  <title id="s132-t">Alwebiee — The Lens Tile</title>
+  <!-- Solid squircle 34..222 (r 63) with one lens-shaped window knocked out
+       (two r-65 arcs, 80 wide x 120 tall). evenodd cuts the window. -->
+  <path fill="#111" fill-rule="evenodd" d="M 97 34 H 159 A 63 63 0 0 1 222 97 V 159 A 63 63 0 0 1 159 222 H 97 A 63 63 0 0 1 34 159 V 97 A 63 63 0 0 1 97 34 Z M 128 68 A 65 65 0 0 1 128 188 A 65 65 0 0 1 128 68 Z"/>
+</svg>
+</g><text x="698.667" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">32px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t" viewBox="0 0 256 256" x="740.667" y="708" width="16" height="16" preserveAspectRatio="xMidYMid meet">
+  <title id="s116-t">Alwebiee — The Lens Tile</title>
+  <!-- Solid squircle 34..222 (r 63) with one lens-shaped window knocked out
+       (two r-65 arcs, 80 wide x 120 tall). evenodd cuts the window. -->
+  <path fill="#111" fill-rule="evenodd" d="M 97 34 H 159 A 63 63 0 0 1 222 97 V 159 A 63 63 0 0 1 159 222 H 97 A 63 63 0 0 1 34 159 V 97 A 63 63 0 0 1 97 34 Z M 128 68 A 65 65 0 0 1 128 188 A 65 65 0 0 1 128 68 Z"/>
+</svg>
+</g><text x="748.667" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">16px</text><text x="592.6666666666667" y="780" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#161616">B · The Lens Tile</text><text x="592.6666666666667" y="808" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#161616" letter-spacing="1.5">RECOMMENDED</text><text x="592.6666666666667" y="842" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">A solid tile with one lens-shaped window:</text><text x="592.6666666666667" y="868" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">focus and clarity, still legible when tiny.</text><rect x="1065.33" y="150" width="474.667" height="774" rx="18" fill="#fff" stroke="#e4e4e0" stroke-width="1"/><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t" viewBox="0 0 256 256" x="1095.33" y="190" width="414.667" height="300" preserveAspectRatio="xMidYMid meet">
+  <title id="c2-t">Alwebiee — The Settled Ripple</title>
+  <!-- Centre disc r 27 + one ring r 88 (stroke 26), split by two aligned
+       36-unit gaps on the vertical axis. Butterfly + 180° symmetric. -->
+  <g fill="none" stroke="#111" stroke-width="26" stroke-linecap="butt">
+    <path d="M 145.85 41.83 A 88 88 0 0 1 145.85 214.17"/>
+    <path d="M 110.15 214.17 A 88 88 0 0 1 110.15 41.83"/>
+  </g>
+  <circle cx="128" cy="128" r="27" fill="#111"/>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="lt" viewBox="0 0 808 256" x="1095.33" y="514" width="414.667" height="120" preserveAspectRatio="xMidYMid meet">
+  <title id="l2-lt">Alwebiee — lockup (wordmark font is a PLACEHOLDER)</title>
+  <!-- Symbol ink scaled to 176 units tall, centred in a 200-unit slot.
+       The wordmark is <text> in "URW Gothic" — a stand-in, not the final typeface. -->
+  <g transform="translate(-30.67,-2.67) scale(1.0209)">
+
+  <title id="l2-t">Alwebiee — The Settled Ripple</title>
+  <!-- Centre disc r 27 + one ring r 88 (stroke 26), split by two aligned
+       36-unit gaps on the vertical axis. Butterfly + 180° symmetric. -->
+  <g fill="none" stroke="#111" stroke-width="26" stroke-linecap="butt">
+    <path d="M 145.85 41.83 A 88 88 0 0 1 145.85 214.17"/>
+    <path d="M 110.15 214.17 A 88 88 0 0 1 110.15 41.83"/>
+  </g>
+  <circle cx="128" cy="128" r="27" fill="#111"/>
+  </g>
+  <text x="230" y="172.4" font-family="URW Gothic" font-size="120"
+        font-weight="600" fill="#111" letter-spacing="-2">Alwebiee</text>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t" viewBox="0 0 256 256" x="1095.33" y="660" width="64" height="64" preserveAspectRatio="xMidYMid meet">
+  <title id="s264-t">Alwebiee — The Settled Ripple</title>
+  <!-- Centre disc r 27 + one ring r 88 (stroke 26), split by two aligned
+       36-unit gaps on the vertical axis. Butterfly + 180° symmetric. -->
+  <g fill="none" stroke="#111" stroke-width="26" stroke-linecap="butt">
+    <path d="M 145.85 41.83 A 88 88 0 0 1 145.85 214.17"/>
+    <path d="M 110.15 214.17 A 88 88 0 0 1 110.15 41.83"/>
+  </g>
+  <circle cx="128" cy="128" r="27" fill="#111"/>
+</svg>
+</g><text x="1127.33" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">64px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t" viewBox="0 0 256 256" x="1185.33" y="692" width="32" height="32" preserveAspectRatio="xMidYMid meet">
+  <title id="s232-t">Alwebiee — The Settled Ripple</title>
+  <!-- Centre disc r 27 + one ring r 88 (stroke 26), split by two aligned
+       36-unit gaps on the vertical axis. Butterfly + 180° symmetric. -->
+  <g fill="none" stroke="#111" stroke-width="26" stroke-linecap="butt">
+    <path d="M 145.85 41.83 A 88 88 0 0 1 145.85 214.17"/>
+    <path d="M 110.15 214.17 A 88 88 0 0 1 110.15 41.83"/>
+  </g>
+  <circle cx="128" cy="128" r="27" fill="#111"/>
+</svg>
+</g><text x="1201.33" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">32px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t" viewBox="0 0 256 256" x="1243.33" y="708" width="16" height="16" preserveAspectRatio="xMidYMid meet">
+  <title id="s216-t">Alwebiee — The Settled Ripple</title>
+  <!-- Centre disc r 27 + one ring r 88 (stroke 26), split by two aligned
+       36-unit gaps on the vertical axis. Butterfly + 180° symmetric. -->
+  <g fill="none" stroke="#111" stroke-width="26" stroke-linecap="butt">
+    <path d="M 145.85 41.83 A 88 88 0 0 1 145.85 214.17"/>
+    <path d="M 110.15 214.17 A 88 88 0 0 1 110.15 41.83"/>
+  </g>
+  <circle cx="128" cy="128" r="27" fill="#111"/>
+</svg>
+</g><text x="1251.33" y="744" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">16px</text><text x="1095.3333333333335" y="780" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#161616">C · The Settled Ripple</text><text x="1095.3333333333335" y="814" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">A settled ripple: a centred point inside</text><text x="1095.3333333333335" y="840" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">one calm ring, cut clean on the vertical</text><text x="1095.3333333333335" y="866" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">axis.</text></svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 808 256" width="808" height="256" role="img" aria-labelledby="lt">
+  <title id="lt">Alwebiee — lockup (wordmark font is a PLACEHOLDER)</title>
+  <!-- Symbol ink scaled to 176 units tall, centred in a 200-unit slot.
+       The wordmark is <text> in "URW Gothic" — a stand-in, not the final typeface. -->
+  <g transform="translate(-19.83,8.17) scale(0.9362)">
+
+  <title id="t">Alwebiee — The Lens Tile</title>
+  <!-- Solid squircle 34..222 (r 63) with one lens-shaped window knocked out
+       (two r-65 arcs, 80 wide x 120 tall). evenodd cuts the window. -->
+  <path fill="#111" fill-rule="evenodd" d="M 97 34 H 159 A 63 63 0 0 1 222 97 V 159 A 63 63 0 0 1 159 222 H 97 A 63 63 0 0 1 34 159 V 97 A 63 63 0 0 1 97 34 Z M 128 68 A 65 65 0 0 1 128 188 A 65 65 0 0 1 128 68 Z"/>
+  </g>
+  <text x="230" y="172.4" font-family="URW Gothic" font-size="120"
+        font-weight="600" fill="#111" letter-spacing="-2">Alwebiee</text>
+</svg>

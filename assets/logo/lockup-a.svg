@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 808 256" width="808" height="256" role="img" aria-labelledby="lt">
+  <title id="lt">Alwebiee — lockup (wordmark font is a PLACEHOLDER)</title>
+  <!-- Symbol ink scaled to 176 units tall, centred in a 200-unit slot.
+       The wordmark is <text> in "URW Gothic" — a stand-in, not the final typeface. -->
+  <g transform="translate(-21.12,6.88) scale(0.9462)">
+
+  <title id="t">Alwebiee — The Woven Frame</title>
+  <!-- One rounded-square frame, drawn as two threads. Thread H (top+right) lies
+       OVER thread V (bottom+left) at the top-left corner, and V lies over H at
+       the bottom-right (automatic under a 180° rotation). The under-thread is
+       cut with a 5-unit seam either side of the over-thread; both thread ends
+       overshoot the join by 31 units. Butt caps keep the weave crisp. -->
+  <g fill="none" stroke="#111" stroke-width="28" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M 35 80 H 142 A 34 34 0 0 1 176 114 V 157"/>
+    <path d="M 176 195 V 221"/>
+    <path d="M 221 176 H 114 A 34 34 0 0 1 80 142 V 99"/>
+    <path d="M 80 61 V 35"/>
+  </g>
+  </g>
+  <text x="230" y="172.4" font-family="URW Gothic" font-size="120"
+        font-weight="600" fill="#111" letter-spacing="-2">Alwebiee</text>
+</svg>

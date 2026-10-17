@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="t">
+  <title id="t">Alwebiee — The Woven Frame</title>
+  <!-- One rounded-square frame, drawn as two threads. Thread H (top+right) lies
+       OVER thread V (bottom+left) at the top-left corner, and V lies over H at
+       the bottom-right (automatic under a 180° rotation). The under-thread is
+       cut with a 5-unit seam either side of the over-thread; both thread ends
+       overshoot the join by 31 units. Butt caps keep the weave crisp. -->
+  <g fill="none" stroke="#111" stroke-width="28" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M 35 80 H 142 A 34 34 0 0 1 176 114 V 157"/>
+    <path d="M 176 195 V 221"/>
+    <path d="M 221 176 H 114 A 34 34 0 0 1 80 142 V 99"/>
+    <path d="M 80 61 V 35"/>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Alwebiee — green options</title>
+<style>
+  :root { color-scheme: light; }
+  body { margin:0; padding:40px; background:#fff; font-family:-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif; color:#111; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  .sub { color:#555; font-size:13px; margin:0 0 28px; }
+  .row { display:flex; gap:0; align-items:stretch; margin:0 0 22px; border:1px solid #e2e2e2; border-radius:10px; overflow:hidden; }
+  .pick { outline:3px solid #0F7A4F; outline-offset:2px; }
+  .art { flex:1 1 auto; display:flex; align-items:center; }
+  .art img { width:520px; max-width:100%; display:block; }
+  .meta { flex:0 0 260px; padding:16px 18px; background:#fafafa; border-left:1px solid #eee; font-size:13px; }
+  .name { font-weight:700; font-size:15px; }
+  .hex { font-family:ui-monospace,Menlo,monospace; margin:6px 0; }
+  .cr { color:#333; }
+  .badge { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+           background:#0F7A4F; color:#fff; padding:3px 8px; border-radius:99px; margin-left:6px; }
+  .note { font-size:12px; color:#666; margin-top:24px; line-height:1.5; }
+</style>
+</head>
+<body>
+  <h1>Alwebiee — green options</h1>
+  <p class="sub">Same lockup, four greens. The contrast column is white text on that green (WCAG AA for text needs ≥ 4.5:1).</p>
+
+  <div class="row">
+    <div class="art" style="background:#0B5F3A"><img src="lockup-a-green-forest.svg" alt="Forest green lockup"></div>
+    <div class="meta"><span class="name">Forest</span><div class="hex">#0B5F3A</div><div class="cr">white text 7.74:1 — AAA</div><div style="margin-top:8px;color:#666">Deepest, most serious. Best for print and long-form.</div></div>
+  </div>
+
+  <div class="row">
+    <div class="art" style="background:#0E6B45"><img src="lockup-a-green-emerald.svg" alt="Emerald lockup"></div>
+    <div class="meta"><span class="name">Emerald</span><div class="hex">#0E6B45</div><div class="cr">white text 6.55:1 — AAA</div><div style="margin-top:8px;color:#666">Rich and premium, a touch brighter than Forest.</div></div>
+  </div>
+
+  <div class="row pick">
+    <div class="art" style="background:#0F7A4F"><img src="lockup-a-green.svg" alt="Alwebiee Green lockup"></div>
+    <div class="meta"><span class="name">Alwebiee Green<span class="badge">Recommended</span></span><div class="hex">#0F7A4F</div><div class="cr">white text 5.36:1 — AA+</div><div style="margin-top:8px;color:#666">Confident, modern, unmistakably green while staying accessible. Good for screens and socials.</div></div>
+  </div>
+
+  <div class="row">
+    <div class="art" style="background:#16A34A"><img src="lockup-a-green-vivid.svg" alt="Vivid green lockup"></div>
+    <div class="meta"><span class="name">Vivid</span><div class="hex">#16A34A</div><div class="cr">dark ink 4.71:1 (white fails at 3.30:1)</div><div style="margin-top:8px;color:#666">Brightest and most energetic — but it needs dark ink, not white.</div></div>
+  </div>
+
+  <p class="note">Rendered lockups (PNG) and self-contained SVGs are in <code>logo-alwebiee/</code>.
+  The wordmark is Plus Jakarta Sans SemiBold (SIL OFL), outlined to paths — so the files need no fonts installed.</p>
+</body>
+</html>

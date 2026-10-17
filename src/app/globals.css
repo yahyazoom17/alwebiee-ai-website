@@ -1,0 +1,622 @@
+@import "tailwindcss";
+
+/* Skill/agent markdown under .opencode contains table separators (e.g. `|---|---:|`)
+   that Tailwind would otherwise treat as utility classes and emit invalid CSS. */
+@source not "../../.opencode";
+
+/* ---------------------------------------------------------------------------
+   Palette
+   Raw values live here and nowhere else. Two blocks override the palette:
+   the system preference, and an explicit [data-theme] attribute so a future
+   in-page toggle is a small, contained addition.
+
+   Contrast rules baked into these values:
+   - --brand (#0F7A4F) is a *surface* colour. It carries white ink (5.36:1).
+     It is never used as small text.
+   - Small text in brand colour uses --brand-ink, chosen per theme to clear
+     WCAG AA on its own background (7.7:1 on light, 10.6:1 on dark).
+--------------------------------------------------------------------------- */
+:root {
+  color-scheme: light;
+
+  --p-bg: #fbfcfb;
+  --p-surface: #ffffff;
+  --p-inset: #f1f5f3;
+  --p-fg: #08120e;
+  --p-muted: #46574f;
+  /* 5.19:1 on --bg and 4.75:1 on --inset, so quiet text passes on tinted bands too. */
+  --p-subtle: #5e6f68;
+  --p-line: rgba(8, 18, 14, 0.1);
+  --p-line-strong: rgba(8, 18, 14, 0.2);
+  /* 3.0:1+ against --surface and --bg: required for control boundaries (WCAG 1.4.11). */
+  /* Interactive control boundaries (secondary buttons, menu toggle) must clear
+     WCAG 1.4.11's 3:1 against every background they can sit on. #8a968f was
+     2.99:1 against --inset — a near-miss that failed. #7c8883 measures 3.35:1
+     against --inset, 3.58:1 against --bg and 3.68:1 against --surface. */
+  --p-control-line: #7c8883;
+  --p-brand: #0f7a4f;
+  /* Darker green hover keeps white ink at 6.9:1 — brighter greens drop below 4.5:1. */
+  --p-brand-hover: #0c6742;
+  --p-brand-ink: #0b5f3a;
+  --p-accent: #16a34a;
+  --p-on-brand: #ffffff;
+  --p-brand-soft: rgba(15, 122, 79, 0.08);
+  --p-glow: rgba(15, 122, 79, 0.16);
+  --p-grid-line: rgba(8, 18, 14, 0.055);
+  --p-gradient-from: #0b5f3a;
+  --p-gradient-to: #16a34a;
+
+  /* Semantic mapping — declared once. */
+  --bg: var(--p-bg);
+  --surface: var(--p-surface);
+  --inset: var(--p-inset);
+  --fg: var(--p-fg);
+  --muted: var(--p-muted);
+  --subtle: var(--p-subtle);
+  --line: var(--p-line);
+  --line-strong: var(--p-line-strong);
+  --control-line: var(--p-control-line);
+  --brand: var(--p-brand);
+  --brand-hover: var(--p-brand-hover);
+  --brand-ink: var(--p-brand-ink);
+  --accent: var(--p-accent);
+  --on-brand: var(--p-on-brand);
+  --brand-soft: var(--p-brand-soft);
+  --glow: var(--p-glow);
+  --grid-line: var(--p-grid-line);
+  --gradient-from: var(--p-gradient-from);
+  --gradient-to: var(--p-gradient-to);
+
+  --header-h: 68px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --p-bg: #060d0a;
+    --p-surface: #0b1512;
+    --p-inset: #0f1d18;
+    --p-fg: #e9f1ed;
+    --p-muted: #a3b4ad;
+    --p-subtle: #7e918a;
+    --p-line: rgba(255, 255, 255, 0.09);
+    --p-line-strong: rgba(255, 255, 255, 0.18);
+    --p-control-line: #6e7a75;
+    --p-brand: #0f7a4f;
+    --p-brand-hover: #0c6742;
+    --p-brand-ink: #46d69b;
+    --p-accent: #1fa96b;
+    --p-on-brand: #ffffff;
+    --p-brand-soft: rgba(70, 214, 155, 0.1);
+    --p-glow: rgba(31, 169, 107, 0.18);
+    --p-grid-line: rgba(255, 255, 255, 0.05);
+    --p-gradient-from: #6fe3af;
+    --p-gradient-to: #23b673;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --p-bg: #060d0a;
+  --p-surface: #0b1512;
+  --p-inset: #0f1d18;
+  --p-fg: #e9f1ed;
+  --p-muted: #a3b4ad;
+  --p-subtle: #7e918a;
+  --p-line: rgba(255, 255, 255, 0.09);
+  --p-line-strong: rgba(255, 255, 255, 0.18);
+  --p-control-line: #6e7a75;
+  --p-brand: #0f7a4f;
+  --p-brand-hover: #0c6742;
+  --p-brand-ink: #46d69b;
+  --p-accent: #1fa96b;
+  --p-on-brand: #ffffff;
+  --p-brand-soft: rgba(70, 214, 155, 0.1);
+  --p-glow: rgba(31, 169, 107, 0.18);
+  --p-grid-line: rgba(255, 255, 255, 0.05);
+  --p-gradient-from: #6fe3af;
+  --p-gradient-to: #23b673;
+}
+
+/* ---------------------------------------------------------------------------
+   Theme -> utilities
+   `inline` keeps utilities pointing at the live variable, so a theme switch
+   flows through every `bg-*`, `text-*` and `border-*` utility automatically.
+   No component in this project uses a `dark:` variant.
+--------------------------------------------------------------------------- */
+@theme inline {
+  --color-base: var(--bg);
+  --color-surface: var(--surface);
+  --color-inset: var(--inset);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-control-line: var(--control-line);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-ink: var(--brand-ink);
+  --color-accent: var(--accent);
+  --color-on-brand: var(--on-brand);
+  --color-brand-soft: var(--brand-soft);
+
+  --font-sans: var(--font-geist-sans);
+  /* --font-display is deliberately NOT declared here. next/font sets that custom
+     property on <html> itself, and the .display-* / .label / heading rules consume
+     it directly. Shadowing it with a theme key of the same name would invert it. */
+  /* --font-mono retired with Geist Mono: no rule needs a monospaced face now. */
+
+  --radius-chip: 8px;
+  --radius-control: 12px;
+  --radius-panel: 20px;
+
+  --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ---------------------------------------------------------------------------
+   Base
+--------------------------------------------------------------------------- */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    /* Guard against any single wide child creating a horizontal scrollbar. */
+    overflow-x: clip;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Headings take the display face by default, so the .display-* classes only
+     have to set size, weight and tracking. Body copy always stays in Geist. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+
+  ::selection {
+    background-color: var(--brand);
+    color: var(--on-brand);
+  }
+
+  /* Outline follows the element's own radius; no radius overrides here. */
+  :focus-visible {
+    outline: 2px solid var(--brand-ink);
+    outline-offset: 3px;
+  }
+
+  /* Sticky header offset for every anchor target. */
+  [id] {
+    scroll-margin-top: calc(var(--header-h) + 1.75rem);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  svg {
+    display: block;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Components
+--------------------------------------------------------------------------- */
+@layer components {
+  /* ---- Typography ----
+     Headings and labels are set in Plus Jakarta Sans — the wordmark's own face —
+     so the largest type on the page is continuous with the logo rather than a
+     coincidence. Body copy, ledes and every paragraph stay in Geist. Tracking is
+     retuned for the display face, which sits a little more open than the previous
+     text face at large sizes. */
+  .display-1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 1.55rem + 4.35vw, 5.25rem);
+    line-height: 0.96;
+    letter-spacing: -0.028em;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  .display-2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 1.15rem + 2.2vw, 2.9rem);
+    line-height: 1.06;
+    letter-spacing: -0.021em;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  .display-3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.5rem);
+    line-height: 1.25;
+    letter-spacing: -0.014em;
+    font-weight: 600;
+  }
+
+  .lede {
+    font-size: clamp(1.0625rem, 1rem + 0.32vw, 1.25rem);
+    line-height: 1.62;
+    color: var(--muted);
+    text-wrap: pretty;
+  }
+
+  /* Small label — a section signpost, a meta key, or a status. Sentence case, in
+     the display face, separated from body copy by size and weight. This replaces
+     the tracked-out all-caps monospace kicker that sat above every heading and
+     made each section read like the one before it. */
+  .label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: normal;
+    text-transform: none;
+    color: var(--muted);
+  }
+
+  /* ---- The stitch rail ----
+     The one structural device on the page. On wide viewports each section hangs
+     off a stitched thread down its left edge, with a node at the signpost — the
+     mark's own idea (two threads woven) used as page architecture rather than as
+     repeated ornament. Below `lg` the thread collapses to a short horizontal
+     stitch that sits before the label instead. */
+  .rail {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+  /* Below `lg` this is the horizontal stitch. */
+  .rail::before {
+    content: "";
+    flex: none;
+    width: 1.25rem;
+    height: 1px;
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--brand) 0 4px,
+      transparent 4px 8px
+    );
+  }
+
+  /* A rail with no signpost carries the thread but no node, and is only worth
+     showing where there is room for it. */
+  .rail-bare {
+    display: none;
+  }
+
+  .rail-node {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .rail,
+    .rail-bare {
+      display: block;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    /* The same pseudo-element, now the vertical thread running the full height
+       of the column the section content hangs from. */
+    .rail::before {
+      position: absolute;
+      left: calc(0.25rem - 0.5px);
+      top: 0;
+      right: auto;
+      bottom: 0;
+      width: 1px;
+      height: auto;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        var(--line-strong) 0 5px,
+        transparent 5px 11px
+      );
+    }
+
+    .rail-node {
+      display: block;
+      position: absolute;
+      top: 0.2rem;
+      left: 0;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 9999px;
+      background-color: var(--brand);
+    }
+  }
+
+  /* The same stitch, laid horizontally. Used where a set of items shares one
+     thread instead of one thread per item — the process steps run along it. */
+  .stitch-h {
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--line-strong) 0 5px,
+      transparent 5px 11px
+    );
+  }
+
+  /* Accent gradient is applied to at most a few words. If the browser cannot
+     clip a background to text, the solid brand colour is used instead —
+     never transparent, so the words stay readable.
+
+     LARGE DISPLAY TEXT ONLY. The lighter stop measures 3.20:1 on --bg (light
+     theme), which clears WCAG AA for large text (>= 24px, or >= 18.66px bold)
+     but would fail the 4.5:1 body-text threshold. Do not reuse this on small
+     text, and do not move it onto an --inset band without re-measuring. */
+  .text-accent-gradient {
+    color: var(--gradient-from);
+  }
+
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    .text-accent-gradient {
+      background-image: linear-gradient(
+        100deg,
+        var(--gradient-from),
+        var(--gradient-to)
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  /* ---- Surfaces ---- */
+  .panel {
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-panel);
+  }
+
+  /* ---- Decorative backdrops ---- */
+  .grid-backdrop {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 76px 76px;
+    background-position: center;
+    -webkit-mask-image: radial-gradient(
+      ellipse 85% 70% at 50% 0%,
+      #000 15%,
+      transparent 78%
+    );
+    mask-image: radial-gradient(
+      ellipse 85% 70% at 50% 0%,
+      #000 15%,
+      transparent 78%
+    );
+  }
+
+  .radial-glow {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 9999px;
+    background: radial-gradient(closest-side, var(--glow), transparent 72%);
+  }
+
+  /* The band texture used behind inner-page content: thread rows that read as
+     stitching rather than as a technical grid. Masked towards the bottom so the
+     band never ends on a hard edge. */
+  .thread-field {
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 26rem;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to bottom, #000 10%, transparent 80%);
+    mask-image: linear-gradient(to bottom, #000 10%, transparent 80%);
+  }
+
+  /* ---- Reveal on scroll (progressive enhancement) ----
+     Default state is visible, so content never depends on JavaScript.
+     The client component marks elements pending after mount, then shown. */
+  .reveal[data-reveal="pending"] {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  .reveal[data-reveal="shown"] {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 560ms var(--ease-soft),
+      transform 560ms var(--ease-soft);
+  }
+
+  /* A keyboard user can arrive by Tab before the observer has fired. While a
+     block is still `pending` it is invisible, so focus has to show it: a link
+     that cannot be seen but can be focused fails 2.4.7. No transition here — the
+     point is to be visible the instant it is reached. */
+  .reveal[data-reveal="pending"]:focus-within {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ---- Scroll lock for the mobile menu ---- */
+  html.nav-open {
+    overflow: hidden;
+  }
+
+  /* ---- Skip link: off-screen until focused, then a normal button ---- */
+  .skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 100;
+    transform: translateY(-180%);
+    border-radius: var(--radius-control);
+    border: 1px solid var(--control-line);
+    background-color: var(--surface);
+    color: var(--fg);
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .skip-link:focus-visible {
+    transform: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Motion
+   Every animation is defined inside a no-preference query, so reduced-motion
+   users get the finished composition with no movement at all.
+--------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes lattice-trace {
+    to {
+      stroke-dashoffset: -480;
+    }
+  }
+
+  @keyframes lattice-breathe {
+    0%,
+    100% {
+      opacity: 0.28;
+    }
+    50% {
+      opacity: 0.85;
+    }
+  }
+
+  @keyframes flow-dash {
+    to {
+      stroke-dashoffset: -64;
+    }
+  }
+
+  @keyframes menu-in {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .menu-panel {
+    animation: menu-in 200ms var(--ease-soft) both;
+  }
+
+  /* No `opacity: 0` here on purpose: the hidden start state lives in the
+     keyframes and is applied by `both` fill. If animations never run — an
+     unsupported browser, a stripped stylesheet — the hero is simply visible. */
+  .hero-in {
+    animation: hero-rise 760ms var(--ease-soft) both;
+  }
+
+  /* -480 is an exact multiple of every dash period used, so each loop is seamless. */
+  .lattice-trace {
+    animation: lattice-trace 13s linear infinite;
+  }
+
+  .lattice-trace-slow {
+    animation: lattice-trace 19s linear infinite;
+  }
+
+  .lattice-node {
+    animation: lattice-breathe 7s ease-in-out infinite;
+  }
+
+  .flow-dash {
+    animation: flow-dash 3.4s linear infinite;
+  }
+
+  .mini-system-flow {
+    animation: flow-dash 2.6s linear infinite;
+  }
+
+  /* ---- Scroll-linked depth ----
+     Layering is the mark's own idea — two threads at different depths — so the
+     page reuses it instead of drawing a second ornament: the hero halo settles
+     behind the content while the mark beside it leads, and the closing band
+     drifts as it crosses. Three rules keep it honest:
+
+     1. `from` is the untransformed state, so at scroll 0 the page is exactly the
+        composition it has without this block. Nothing about the layout depends
+        on the animation running.
+     2. Only layers whose edges are transparent or clipped move. The grid texture
+        holds still and acts as the reference plane, because it is the one layer
+        whose top edge is painted — drifting it could expose a seam.
+     3. It is CSS-only. A scroll timeline needs no listener, no client component
+        and no main-thread work, and it lives inside this reduced-motion block,
+     `transform` rather than `translate` on purpose: the Tailwind translate
+     utilities set the standalone `translate` property, so the two compose and a
+     layer that is already offset stays exactly where it was put. */
+  @supports (animation-timeline: view()) {
+    @keyframes depth-lag {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(var(--depth, 2.25rem));
+      }
+    }
+
+    @keyframes depth-lead {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(calc(var(--depth, 2.25rem) * -1));
+      }
+    }
+
+    /* Tied to the page's first 80vh — the span the hero covers as it leaves — so
+       the drift is spent while the hero is still on screen. `from` is the resting
+       position, so at scroll 0 nothing has moved. */
+    .depth-lag {
+      animation: depth-lag linear both;
+      animation-timeline: scroll();
+      animation-range: 0 80vh;
+    }
+
+    /* Below `lg` the hero is a single column and the mark sits directly under the
+       copy, so it holds still rather than closing that gap. */
+    @media (min-width: 64rem) {
+      .depth-lead {
+        animation: depth-lead linear both;
+        animation-timeline: scroll();
+        animation-range: 0 80vh;
+      }
+    }
+
+    /* The closing band sits most of a page down, so it tracks its own traversal
+       rather than the page's first viewport. Both its layers fade to nothing well
+       inside their own boxes, so the drift cannot expose an edge. */
+    .depth-band {
+      --depth: 3rem;
+      animation: depth-lag linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 55%;
+    }
+  }
+}
